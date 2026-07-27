@@ -1,0 +1,138 @@
+.encabezado {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+
+.etiqueta {
+  margin: 0 0 8px;
+  color: var(--color-azul);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.encabezado h1 {
+  margin: 0;
+  font-size: 32px;
+  letter-spacing: -0.03em;
+}
+
+.graficas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.tarjetas {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.tarjeta {
+  min-height: 148px;
+  padding: 24px;
+  border: 1px solid var(--color-borde);
+  border-radius: 16px;
+  background: var(--color-superficie);
+  box-shadow: var(--sombra-suave);
+}
+
+.tarjeta p {
+  margin: 0 0 20px;
+  color: var(--color-texto-secundario);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.tarjeta strong {
+  color: var(--color-texto);
+  font-size: 32px;
+  letter-spacing: -0.03em;
+}
+
+.pedidos {
+  margin-top: 32px;
+  padding: 28px;
+  border: 1px solid var(--color-borde);
+  border-radius: 16px;
+  background: var(--color-superficie);
+  box-shadow: var(--sombra-suave);
+}
+
+.pedidos h2 {
+  margin: 0 0 24px;
+  font-size: 20px;
+  letter-spacing: -0.02em;
+}
+
+.contenedorTabla {
+  overflow-x: auto;
+}
+
+.tabla {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.tabla th,
+.tabla td {
+  padding: 16px;
+  border-bottom: 1px solid var(--color-borde);
+  white-space: nowrap;
+}
+
+.tabla th {
+  color: var(--color-texto-secundario);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.tabla td {
+  color: #334155;
+  font-size: 14px;
+}
+
+.tabla tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.estado {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.estadoPendiente { background: #fff1dd; color: #c56a00; }
+.estadoPagado { background: #e0f2fe; color: #0369a1; }
+.estadoCompletado { background: #e7f8ed; color: #16803c; }
+.estadoCancelado { background: #feeceb; color: #c83b32; }
+
+@media (max-width: 760px) {
+  .graficas {
+    grid-template-columns: 1fr;
+  }
+
+  .tarjetas {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .tarjetas {
+    grid-template-columns: 1fr;
+  }
+
+  .pedidos {
+    padding: 20px;
+  }
+}

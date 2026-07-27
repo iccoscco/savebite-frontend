@@ -1,0 +1,93 @@
+.grafica {
+  padding: 24px;
+  border: 1px solid var(--color-borde);
+  border-radius: 16px;
+  background: var(--color-superficie);
+  box-shadow: var(--sombra-suave);
+}
+
+.titulo {
+  margin: 0 0 20px;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-texto);
+}
+
+/* Barras */
+.svgBarras {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.etiquetaEje {
+  fill: var(--color-texto-secundario);
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.valorEje {
+  fill: var(--color-texto);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* Donut */
+.donutContenedor {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.svgDonut {
+  width: 140px;
+  height: 140px;
+  flex-shrink: 0;
+}
+
+.donutTotal {
+  fill: var(--color-texto);
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.donutSubtitulo {
+  fill: var(--color-texto-secundario);
+  font-size: 10px;
+  font-weight: 600;
+}
+
+/* Leyenda */
+.leyenda {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 10px;
+}
+
+.leyenda li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.leyendaColor {
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.leyendaTexto {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-texto);
+}
+
+@media (max-width: 760px) {
+  .donutContenedor {
+    flex-direction: column;
+  }
+}

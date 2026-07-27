@@ -1,0 +1,32 @@
+:root {
+  --color-fondo: #f6f8fc;
+  --color-superficie: #ffffff;
+  --color-texto: #172033;
+  --color-texto-secundario: #64748b;
+  --color-azul: #1769e0;
+  --color-azul-oscuro: #1158bd;
+  --color-borde: #edf1f7;
+  --color-borde-input: #dbe3ee;
+  --sombra-suave: 0 4px 16px rgb(21 34 50 / 4%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--color-fondo);
+  color: var(--color-texto);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input {
+  font: inherit;
+}
